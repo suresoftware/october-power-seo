@@ -1,5 +1,6 @@
 <?php namespace SureSoftware\PowerSEO\Updates;
 
+use Illuminate\Support\Facades\DB;
 use Schema;
 use October\Rain\Database\Updates\Migration;
 use System\Classes\PluginManager;
