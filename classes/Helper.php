@@ -1,6 +1,6 @@
 <?php namespace SureSoftware\PowerSEO\classes;
 
-use SureSoftware\SeoExtension\Models\Settings;
+use SureSoftware\PowerSEO\Models\Settings;
 use Request;
 
 class Helper

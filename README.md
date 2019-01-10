@@ -1,14 +1,18 @@
 Power SEO an OctoberCMS Plugin
 =============
 
-_First please note that this plugin was originally created by AnandPatel, however after 2 years of no support and many 
+_Please note that this plugin was originally created by AnandPatel, however after 2 years of no support and many 
 issues with the plugin, I have taken over the plugin development and maintain it under a new repository. This new 
 version fixes the server errors in the old plugin._
 
-## Migration from Old Plugin
+## Migration from AnandPatel.SeoExtension
 
-As all the syntax is same for the `AnandPatel.SeoExtension`, to upgrade you only need to remove the 
-`AnandPatel.SeoExtension` plugin and add `SureSoftware.PowerSEO`
+1. Install `SureSoftware.PowerSEO`
+2. Remove `AnandPatel.SeoExtension`
+
+As all the syntax for the components are same for the `AnandPatel.SeoExtension`, to upgrade you only need to remove the 
+`AnandPatel.SeoExtension` plugin and add `SureSoftware.PowerSEO`. All settings and component parameters should be 
+migrated across.
 
 ###Inject SEO fields to CMS Pages, Static Pages and Blog.
 

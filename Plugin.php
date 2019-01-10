@@ -8,7 +8,7 @@ use System\Classes\PluginManager;
 use System\Classes\SettingsManager;
 
 /**
- * SeoExtension Plugin Information File
+ * PowerSEO Plugin Information File
  */
 class Plugin extends PluginBase
 {

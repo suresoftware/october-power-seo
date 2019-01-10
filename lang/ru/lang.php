@@ -31,7 +31,7 @@ return [
             'og' => 'Использовать Open Graph(og)',
             'og_comment' => 'Включить Open Graph(og) теги',
             'sitename' => 'Название сайта для Open Graph',
-            'sitename_comment' => 'Название вашего сайта. Не используйте URL сайта (например, не "seoextension.com", а "Power SEO").',
+            'sitename_comment' => 'Название вашего сайта. Не используйте URL сайта (например, не "powerseo.com", а "Power SEO").',
             'fb' => 'Facebook App Id',
             'fb_comment' => 'Уникальный идентификатор, что позволяет Facebook идентифицировать ваш сайт.'
         ],
