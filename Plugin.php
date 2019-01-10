@@ -1,6 +1,6 @@
-<?php namespace anandpatel\seoextension;
+<?php namespace SureSoftware\PowerSEO;
 
-use AnandPatel\SeoExtension\classes\Helper;
+use SureSoftware\PowerSEO\classes\Helper;
 use Cms\Classes\Page;
 use Cms\Classes\Theme;
 use System\Classes\PluginBase;
@@ -21,8 +21,8 @@ class Plugin extends PluginBase
     public function pluginDetails()
     {
         return [
-            'name'        => 'anandpatel.seoextension::lang.plugin.name',
-            'description' => 'anandpatel.seoextension::lang.plugin.description',
+            'name'        => 'suresoftware.powerseo::lang.plugin.name',
+            'description' => 'suresoftware.powerseo::lang.plugin.description',
             'author'      => 'AnandPatel',
             'icon'        => 'icon-search'
         ];
@@ -32,9 +32,9 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'AnandPatel\SeoExtension\Components\BlogPost' => 'SeoBlogPost',
-            'AnandPatel\SeoExtension\Components\StaticPage' => 'SeoStaticPage',
-            'AnandPatel\SeoExtension\Components\CmsPage' => 'SeoCmsPage',
+            'SureSoftware\PowerSEO\Components\BlogPost' => 'SeoBlogPost',
+            'SureSoftware\PowerSEO\Components\StaticPage' => 'SeoStaticPage',
+            'SureSoftware\PowerSEO\Components\CmsPage' => 'SeoCmsPage',
         ];
     }
 
@@ -42,12 +42,12 @@ class Plugin extends PluginBase
     {
         return [
             'settings' => [
-                'label'       => 'anandpatel.seoextension::lang.settings.label',
-                'description' => 'anandpatel.seoextension::lang.settings.description',
+                'label'       => 'suresoftware.powerseo::lang.settings.label',
+                'description' => 'suresoftware.powerseo::lang.settings.description',
                 'icon'        => 'icon-search',
                 'category'    =>  SettingsManager::CATEGORY_MYSETTINGS,
-                'permissions' => ['anandpatel.seoextension.settings.edit'],
-                'class'       => 'AnandPatel\SeoExtension\Models\Settings',
+                'permissions' => ['suresoftware.powerseo.settings.edit'],
+                'class'       => 'SureSoftware\PowerSEO\Models\Settings',
                 'order'       => 100
             ]
         ];
@@ -68,9 +68,9 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'anandpatel.seoextension.settings.edit' => [
-                'label' => 'anandpatel.seoextension::lang.settings.permissions.settings_edit',
-                'tab' => 'anandpatel.seoextension::lang.plugin.name'
+            'suresoftware.powerseo.settings.edit' => [
+                'label' => 'suresoftware.powerseo::lang.settings.permissions.settings_edit',
+                'tab' => 'suresoftware.powerseo::lang.plugin.name'
             ]
         ];
     }
@@ -112,37 +112,37 @@ class Plugin extends PluginBase
             if (PluginManager::instance()->hasPlugin('RainLab.Pages') && $widget->model instanceof \RainLab\Pages\Classes\Page) {
                 $widget->addFields([
                         'viewBag[seo_title]' => [
-                        'label'   => 'anandpatel.seoextension::lang.editor.meta_title',
+                        'label'   => 'suresoftware.powerseo::lang.editor.meta_title',
                         'type'    => 'text',
                         'tab'     => 'cms::lang.editor.meta'
                         ],
                         'viewBag[seo_description]' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.meta_description',
+                            'label'   => 'suresoftware.powerseo::lang.editor.meta_description',
                             'type'    => 'textarea',
                             'size'    => 'tiny',
                             'tab'     => 'cms::lang.editor.meta'
                         ],
                         'viewBag[seo_keywords]' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.meta_keywords',
+                            'label'   => 'suresoftware.powerseo::lang.editor.meta_keywords',
                             'type'    => 'textarea',
                             'size'    => 'tiny',
                             'tab'     => 'cms::lang.editor.meta'
                         ],
                         'viewBag[canonical_url]' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.canonical_url',
+                            'label'   => 'suresoftware.powerseo::lang.editor.canonical_url',
                             'type'    => 'text',
                             'tab'     => 'cms::lang.editor.meta',
                             'span'    => 'left'
                         ],
                         'viewBag[redirect_url]' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.redirect_url',
+                            'label'   => 'suresoftware.powerseo::lang.editor.redirect_url',
                             'type'    => 'text',
                             'tab'     => 'cms::lang.editor.meta',
                             'span'    => 'right'
 
                         ],
                         'viewBag[robot_index]' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.robot_index',
+                            'label'   => 'suresoftware.powerseo::lang.editor.robot_index',
                             'type'    => 'dropdown',
                             'tab'     => 'cms::lang.editor.meta',
                             'options' => $this->getIndexOptions(),
@@ -150,7 +150,7 @@ class Plugin extends PluginBase
                             'span'    => 'left'
                         ],
                         'viewBag[robot_follow]' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.robot_follow',
+                            'label'   => 'suresoftware.powerseo::lang.editor.robot_follow',
                             'type'    => 'dropdown',
                             'tab'     => 'cms::lang.editor.meta',
                             'options' => $this->getFollowOptions(),
@@ -164,37 +164,37 @@ class Plugin extends PluginBase
             if (PluginManager::instance()->hasPlugin('RainLab.Blog') && $widget->model instanceof \RainLab\Blog\Models\Post) {
                 $widget->addFields([
                         'seo_title' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.meta_title',
+                            'label'   => 'suresoftware.powerseo::lang.editor.meta_title',
                             'type'    => 'text',
                             'tab'     => 'SEO'
                         ],
                         'seo_description' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.meta_description',
+                            'label'   => 'suresoftware.powerseo::lang.editor.meta_description',
                             'type'    => 'textarea',
                             'size'    => 'tiny',
                             'tab'     => 'SEO'
                         ],
                         'seo_keywords' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.meta_keywords',
+                            'label'   => 'suresoftware.powerseo::lang.editor.meta_keywords',
                             'type'    => 'textarea',
                             'size'    => 'tiny',
                             'tab'     => 'SEO'
                         ],
                         'canonical_url' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.canonical_url',
+                            'label'   => 'suresoftware.powerseo::lang.editor.canonical_url',
                             'type'    => 'text',
                             'tab'     => 'SEO',
                             'span'    => 'left'
                         ],
                         'redirect_url' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.redirect_url',
+                            'label'   => 'suresoftware.powerseo::lang.editor.redirect_url',
                             'type'    => 'text',
                             'tab'     => 'SEO',
                             'span'    => 'right'
 
                         ],
                         'robot_index' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.robot_index',
+                            'label'   => 'suresoftware.powerseo::lang.editor.robot_index',
                             'type'    => 'dropdown',
                             'tab'     => 'SEO',
                             'options' => $this->getIndexOptions(),
@@ -202,7 +202,7 @@ class Plugin extends PluginBase
                             'span'    => 'left'
                         ],
                         'robot_follow' => [
-                            'label'   => 'anandpatel.seoextension::lang.editor.robot_follow',
+                            'label'   => 'suresoftware.powerseo::lang.editor.robot_follow',
                             'type'    => 'dropdown',
                             'tab'     => 'SEO',
                             'options' => $this->getFollowOptions(),
@@ -224,27 +224,27 @@ class Plugin extends PluginBase
             $widget->addFields(
                 [
                     'settings[seo_keywords]' => [
-                        'label'   => 'anandpatel.seoextension::lang.editor.meta_keywords',
+                        'label'   => 'suresoftware.powerseo::lang.editor.meta_keywords',
                         'type'    => 'textarea',
                         'tab'     => 'cms::lang.editor.meta',
                         'size'    => 'tiny',
                         'placeholder' => "hello"
                     ],
                     'settings[canonical_url]' => [
-                        'label'   => 'anandpatel.seoextension::lang.editor.canonical_url',
+                        'label'   => 'suresoftware.powerseo::lang.editor.canonical_url',
                         'type'    => 'text',
                         'tab'     => 'cms::lang.editor.meta',
                         'span'    => 'left'
                     ],
                     'settings[redirect_url]' => [
-                        'label'   => 'anandpatel.seoextension::lang.editor.redirect_url',
+                        'label'   => 'suresoftware.powerseo::lang.editor.redirect_url',
                         'type'    => 'text',
                         'tab'     => 'cms::lang.editor.meta',
                         'span'    => 'right'
 
                     ],
                     'settings[robot_index]' => [
-                        'label'   => 'anandpatel.seoextension::lang.editor.robot_index',
+                        'label'   => 'suresoftware.powerseo::lang.editor.robot_index',
                         'type'    => 'dropdown',
                         'tab'     => 'cms::lang.editor.meta',
                         'options' => $this->getIndexOptions(),
@@ -252,7 +252,7 @@ class Plugin extends PluginBase
                         'span'    => 'left'
                     ],
                     'settings[robot_follow]' => [
-                        'label'   => 'anandpatel.seoextension::lang.editor.robot_follow',
+                        'label'   => 'suresoftware.powerseo::lang.editor.robot_follow',
                         'type'    => 'dropdown',
                         'tab'     => 'cms::lang.editor.meta',
                         'options' => $this->getFollowOptions(),

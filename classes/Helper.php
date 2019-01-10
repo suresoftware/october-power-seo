@@ -1,4 +1,4 @@
-<?php namespace AnandPatel\SeoExtension\classes;
+<?php namespace SureSoftware\PowerSEO\classes;
 
 use SureSoftware\SeoExtension\Models\Settings;
 use Request;

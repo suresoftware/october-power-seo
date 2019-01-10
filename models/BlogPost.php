@@ -1,4 +1,4 @@
-<?php namespace AnandPatel\SeoExtension\Models;
+<?php namespace SureSoftware\PowerSEO\Models;
 
 use Model;
 

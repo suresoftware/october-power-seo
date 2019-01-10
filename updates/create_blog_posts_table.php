@@ -1,4 +1,4 @@
-<?php namespace AnandPatel\SeoExtension\Updates;
+<?php namespace SureSoftware\PowerSEO\Updates;
 
 use Schema;
 use October\Rain\Database\Updates\Migration;

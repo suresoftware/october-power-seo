@@ -1,6 +1,6 @@
 <?php
 
-namespace AnandPatel\SeoExtension\models;
+namespace SureSoftware\PowerSEO\models;
 
 use Model;
 

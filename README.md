@@ -5,6 +5,11 @@ _First please note that this plugin was originally created by AnandPatel, howeve
 issues with the plugin, I have taken over the plugin development and maintain it under a new repository. This new 
 version fixes the server errors in the old plugin._
 
+## Migration from Old Plugin
+
+As all the syntax is same for the `AnandPatel.SeoExtension`, to upgrade you only need to remove the 
+`AnandPatel.SeoExtension` plugin and add `SureSoftware.PowerSEO`
+
 ###Inject SEO fields to CMS Pages, Static Pages and Blog.
 
 This plugin add SEO fields to CMS Pages, Static Pages and Blog, and for using it you simply need to drop component on layout/page.
