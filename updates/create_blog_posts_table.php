@@ -11,13 +11,27 @@ class CreateBlogPostsTable extends Migration
     {
         if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
             Schema::table('rainlab_blog_posts', function ($table) {
-                $table->string('seo_title')->nullable();
-                $table->string('seo_description')->nullable();
-                $table->string('seo_keywords')->nullable();
-                $table->string('canonical_url')->nullable();
-                $table->string('redirect_url')->nullable();
-                $table->string('robot_index')->nullable();
-                $table->string('robot_follow')->nullable();
+                if (Schema::hasColumn('rainlab_blog_posts', 'seo_title')) {
+                    $table->string('seo_title')->nullable();
+                }
+                if (Schema::hasColumn('rainlab_blog_posts', 'seo_description')) {
+                    $table->string('seo_description')->nullable();
+                }
+                if (Schema::hasColumn('rainlab_blog_posts', 'seo_keywords')) {
+                    $table->string('seo_keywords')->nullable();
+                }
+                if (Schema::hasColumn('rainlab_blog_posts', 'canonical_url')) {
+                    $table->string('canonical_url')->nullable();
+                }
+                if (Schema::hasColumn('rainlab_blog_posts', 'redirect_url')) {
+                    $table->string('redirect_url')->nullable();
+                }
+                if (Schema::hasColumn('rainlab_blog_posts', 'robot_index')) {
+                    $table->string('robot_index')->nullable();
+                }
+                if (Schema::hasColumn('rainlab_blog_posts', 'robot_follow')) {
+                    $table->string('robot_follow')->nullable();
+                }
             });
         }
     }
