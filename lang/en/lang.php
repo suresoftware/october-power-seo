@@ -1,11 +1,11 @@
 <?php return [
     'plugin' => [
-        'name' => 'SEO Extension',
-        'description' => 'Provide SEO Extension to October CMS Pages, Static Pages, Blog post',
+        'name' => 'Power SEO',
+        'description' => 'Provide Power SEO to October CMS Pages, Static Pages, Blog post',
     ],
     'editor' => [
-        'meta_title' => 'Meta Title for SEO Extension',
-        'meta_description' => 'Meta Description for SEO Extension',
+        'meta_title' => 'Meta Title for Power SEO',
+        'meta_description' => 'Meta Description for Power SEO',
         'meta_keywords' => 'Meta Keywords',
         'canonical_url' => 'Canonical URL',
         'redirect_url' => 'Redirect URL',
@@ -13,10 +13,10 @@
         'robot_follow' => 'Robot Follow',
     ],
     'settings' => [
-        'label' => 'SEO Extension',
-        'description' => 'Configure SEO Extension',
+        'label' => 'Power SEO',
+        'description' => 'Configure Power SEO',
         'permissions' => [
-            'settings_edit' => 'Configure SEO Extension'
+            'settings_edit' => 'Configure Power SEO'
         ],
         'tab_settings' => [
             'label' => 'Settings',
@@ -41,7 +41,7 @@
             'og' => 'Use Open Graph(og)',
             'og_comment' => 'Enable Open Graph(og) Tags',
             'sitename' => 'Site name for Open Graph',
-            'sitename_comment' => 'The name of your website. Not the URL, but the name. (i.e. "SEO Extension" not "seoextension.com".)',
+            'sitename_comment' => 'The name of your website. Not the URL, but the name. (i.e. "Power SEO" not "powerseo.com".)',
             'fb' => 'Facebook App Id',
             'fb_comment' => 'The unique ID that lets Facebook know the identity of your site.',
         ],

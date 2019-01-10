@@ -2,12 +2,12 @@
 
 return [
     'plugin' => [
-        'name' =>  'SEO Eklentisi',
+        'name' =>  'Güç SEO',
         'description' => 'Sayfalar, Sabit Sayfalar ve Blog yazıları için SEO işlemleri yapar.'
     ],
     'settings' => [
-        'label' => 'SEO Eklentisi',
-        'description' => 'SEO Eklentisi Ayarları',
+        'label' => 'Güç SEO',
+        'description' => 'Güç SEO Ayarları',
         'tab_settings' => [
             'label' => 'Ayarlar',
             'site' => 'Başlık site adı kullan',
@@ -31,7 +31,7 @@ return [
             'og' => 'Open Graph(og) Kullan',
             'og_comment' => 'Open Graph(og) Taglarını Aktifleştir',
             'sitename' => 'Open Graph İçin Site Adı',
-            'sitename_comment' => 'Websitenizin adı. URL girmeyin, site adını girin. (örneğin "seoeklentisi.com" yazmayın, "SEO Eklentisi" yazın.)',
+            'sitename_comment' => 'Websitenizin adı. URL girmeyin, site adını girin. (örneğin "güçseo.com" yazmayın, "Güç SEO" yazın.)',
             'fb' => 'Facebook App Id\'si',
             'fb_comment' => 'Facebook\'un sitenizi tanımasını sağlayan benzersiz kimlik.'
         ],

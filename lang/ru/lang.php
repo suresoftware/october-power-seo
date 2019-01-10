@@ -2,11 +2,11 @@
 
 return [
     'plugin' => [
-        'name' =>  'Поисковая оптимизация',
+        'name' =>  'мощность Поисковая оптимизация',
         'description' => 'Управление SEO информацией для CMS страниц, статических страниц и постов блога'
     ],
     'settings' => [
-        'label' => 'Поисковая оптимизация',
+        'label' => 'мощность Поисковая оптимизация',
         'description' => 'Настройки поисковой оптимизации',
         'tab_settings' => [
             'label' => 'Настройки',
@@ -31,7 +31,7 @@ return [
             'og' => 'Использовать Open Graph(og)',
             'og_comment' => 'Включить Open Graph(og) теги',
             'sitename' => 'Название сайта для Open Graph',
-            'sitename_comment' => 'Название вашего сайта. Не используйте URL сайта (например, не "seoextension.com", а "SEO Extension").',
+            'sitename_comment' => 'Название вашего сайта. Не используйте URL сайта (например, не "seoextension.com", а "Power SEO").',
             'fb' => 'Facebook App Id',
             'fb_comment' => 'Уникальный идентификатор, что позволяет Facebook идентифицировать ваш сайт.'
         ],

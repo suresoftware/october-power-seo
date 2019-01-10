@@ -2,12 +2,12 @@
 
 return [
     'plugin' => [
-        'name' =>  'SEO Rozšíření',
-        'description' => 'Poskytuje SEO rozšíření pro CMS stránky, statické stránky a blogové články',
+        'name' =>  'Napájení SEO',
+        'description' => 'Poskytuje Napájení SEO pro CMS stránky, statické stránky a blogové články',
     ],
     'settings' => [
-        'label' => 'SEO Rozšíření',
-        'description' => 'Konfigurace SEO Rozšíření',
+        'label' => 'Napájení SEO',
+        'description' => 'Konfigurace Napájení SEO',
         'tab_settings' => [
             'label' => 'Nastavení',
             'site' => 'Použít název stránku v titulku stránky',
@@ -31,7 +31,7 @@ return [
             'og' => 'Použít Open Graph (og)',
             'og_comment' => 'Aktivovat Open Graph (og) tagy',
             'sitename' => 'Název stránek pro Open Graph',
-            'sitename_comment' => 'Název stránek. Ne URL. Například "SEO Extension" ne "seoextension.com".',
+            'sitename_comment' => 'Název stránek. Ne URL. Například "Power SEO" ne "powerseo.com".',
             'fb' => 'ID Facebook Aplikace',
             'fb_comment' => 'Unikátní ID podle kterých dokáže Facebook identifikovat vaše stránky.',
         ],
