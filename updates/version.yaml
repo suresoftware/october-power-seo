@@ -1,0 +1,13 @@
+1.0.1:
+      - First version of Seo Extension
+      - create_blog_posts_table.php
+1.0.2:
+      - Bug fixes
+1.0.3:
+      - Backend Settings added to configure meta tags & Open Graph tags added
+1.0.4:
+      - Code clean up and change path naming in settings model
+1.0.5:
+      - Add Turkish, Russian, cs_CZ locale
+1.0.6:
+      - Fix issue of SEO Settings Errors

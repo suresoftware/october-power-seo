@@ -1,0 +1,76 @@
+tabs:
+  fields:
+    enable_title:
+      label: anandpatel.seoextension::lang.settings.tab_settings.site
+      comment: anandpatel.seoextension::lang.settings.tab_settings.site_comment
+      type: switch
+      span: left
+      tab: anandpatel.seoextension::lang.settings.tab_settings.label
+
+    enable_canonical_url:
+      label: anandpatel.seoextension::lang.settings.tab_settings.canonical
+      type: switch
+      comment: anandpatel.seoextension::lang.settings.tab_settings.canonical_comment
+      tab: anandpatel.seoextension::lang.settings.tab_settings.label
+      span: right
+
+    title:
+      label: anandpatel.seoextension::lang.settings.tab_settings.sitename
+      commentAbove: anandpatel.seoextension::lang.settings.tab_settings.sitename_comment_above
+      span: left
+      comment: anandpatel.seoextension::lang.settings.tab_settings.sitename_comment
+      tab: anandpatel.seoextension::lang.settings.tab_settings.label
+      placeholder: anandpatel.seoextension::lang.settings.tab_settings.sitename_placeholder
+
+    title_position:
+      label: anandpatel.seoextension::lang.settings.tab_settings.title_position
+      type: radio
+      span: right
+      tab: anandpatel.seoextension::lang.settings.tab_settings.label
+      comment: anandpatel.seoextension::lang.settings.tab_settings.title_position_comment
+      options:
+        prefix: anandpatel.seoextension::lang.settings.tab_settings.title_position_prefix
+        suffix: anandpatel.seoextension::lang.settings.tab_settings.title_position_suffix
+
+    content:
+      type: hint
+      path: $/anandpatel/seoextension/models/settings/_other_tags_hint.htm
+      tab: anandpatel.seoextension::lang.settings.tab_settings.label
+
+    other_tags:
+      label: anandpatel.seoextension::lang.settings.tab_settings.other_tags
+      type: codeeditor
+      tab: anandpatel.seoextension::lang.settings.tab_settings.label
+      commentAbove: anandpatel.seoextension::lang.settings.tab_settings.other_tags_comment_above
+      comment: anandpatel.seoextension::lang.settings.tab_settings.other_tags_comment
+
+    og_tags_description:
+      type: hint
+      path: $/anandpatel/seoextension/models/settings/_og_tags_description.htm
+      tab: anandpatel.seoextension::lang.settings.tab_og.label
+
+    enable_og_tags:
+      label: anandpatel.seoextension::lang.settings.tab_og.og
+      type: switch
+      comment: anandpatel.seoextension::lang.settings.tab_og.og_comment
+      tab: anandpatel.seoextension::lang.settings.tab_og.label
+
+    og_sitename:
+      label: anandpatel.seoextension::lang.settings.tab_og.sitename
+      type: text
+      comment: anandpatel.seoextension::lang.settings.tab_og.sitename_comment
+      tab: anandpatel.seoextension::lang.settings.tab_og.label
+
+    og_fb_appid:
+      label: anandpatel.seoextension::lang.settings.tab_og.fb
+      comment: anandpatel.seoextension::lang.settings.tab_og.fb_comment
+      type: text
+      span: left
+      tab: anandpatel.seoextension::lang.settings.tab_og.label
+
+
+
+
+
+
+
