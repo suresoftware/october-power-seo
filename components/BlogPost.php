@@ -18,7 +18,7 @@ class BlogPost extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'suresoftware.powerseo::lang.component.blog.name',
+            'name' => 'suresoftware.powerseo::lang.component.blog.name',
             'description' => 'suresoftware.powerseo::lang.component.blog.description'
         ];
     }

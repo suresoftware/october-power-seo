@@ -2,7 +2,7 @@
 
 return [
     'plugin' => [
-        'name' =>  'Güç SEO',
+        'name' => 'Güç SEO',
         'description' => 'Sayfalar, Sabit Sayfalar ve Blog yazıları için SEO işlemleri yapar.'
     ],
     'settings' => [

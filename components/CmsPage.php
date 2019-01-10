@@ -31,7 +31,7 @@ class CmsPage extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'suresoftware.powerseo::lang.component.cms.name',
+            'name' => 'suresoftware.powerseo::lang.component.cms.name',
             'description' => 'suresoftware.powerseo::lang.component.cms.description'
         ];
     }
@@ -45,8 +45,7 @@ class CmsPage extends ComponentBase
     {
         $this->page["hasBlog"] = false;
 
-        if(!$this->page->page->hasComponent("blogPost"))
-        {
+        if (!$this->page->page->hasComponent("blogPost")) {
             $this->seo_title = $this->page["seo_title"] = empty($this->page->meta_title) ? $this->page->title : $this->page->meta_title;
             $this->seo_description = $this->page["seo_description"] = $this->page->meta_description;
             $this->seo_keywords = $this->page["seo_keywords"] = $this->page->seo_keywords;
@@ -57,17 +56,15 @@ class CmsPage extends ComponentBase
 
             $settings = Settings::instance();
 
-            if($settings->enable_og_tags)
-            {
+            if ($settings->enable_og_tags) {
                 $this->ogTitle = empty($this->page->meta_title) ? $this->page->title : $this->page->meta_title;
                 $this->ogDescription = $this->page->meta_description;
-                $this->ogUrl = empty($this->page->canonical_url) ? Request::url() : $this->page->canonical_url ;
+                $this->ogUrl = empty($this->page->canonical_url) ? Request::url() : $this->page->canonical_url;
                 $this->ogSiteName = $settings->og_sitename;
                 $this->ogFbAppId = $settings->og_fb_appid;
             }
 
-        }
-        else{
+        } else {
             $this->hasBlog = $this->page["hasBlog"] = true;
         }
     }

@@ -3,18 +3,14 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 use System\Classes\PluginManager;
+
 class CreateBlogPostsTable extends Migration
 {
 
     public function up()
     {
-        //TODO check if the other plugin is installed, and migrate the table data across
-
-        //TODO also migrate the settings from the old plugin
-        if(PluginManager::instance()->hasPlugin('RainLab.Blog'))
-        {
-            Schema::table('rainlab_blog_posts', function($table)
-            {
+        if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
+            Schema::table('rainlab_blog_posts', function ($table) {
                 $table->string('seo_title')->nullable();
                 $table->string('seo_description')->nullable();
                 $table->string('seo_keywords')->nullable();
@@ -28,10 +24,8 @@ class CreateBlogPostsTable extends Migration
 
     public function down()
     {
-        if(PluginManager::instance()->hasPlugin('RainLab.Blog'))
-        {
-            Schema::table('rainlab_blog_posts', function($table)
-            {
+        if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
+            Schema::table('rainlab_blog_posts', function ($table) {
                 $table->dropColumn('seo_title');
                 $table->dropColumn('seo_description');
                 $table->dropColumn('seo_keywords');

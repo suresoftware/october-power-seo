@@ -2,7 +2,7 @@
 
 return [
     'plugin' => [
-        'name' =>  'Napájení SEO',
+        'name' => 'Napájení SEO',
         'description' => 'Poskytuje Napájení SEO pro CMS stránky, statické stránky a blogové články',
     ],
     'settings' => [

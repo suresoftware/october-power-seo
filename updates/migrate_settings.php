@@ -3,6 +3,7 @@
 use Schema;
 use October\Rain\Database\Updates\Migration;
 use System\Classes\PluginManager;
+
 class MigrateSettings extends Migration
 {
 
@@ -14,7 +15,7 @@ class MigrateSettings extends Migration
             ->where('item', 'anandpatel_seoextension_settings')
             ->first();
 
-        if($settings) {
+        if ($settings) {
             DB::table('system_settings')->insert([
                 'item' => 'suresoftware_powerseo_settings',
                 'value' => $settings->value

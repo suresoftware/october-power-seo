@@ -4,7 +4,8 @@ namespace SureSoftware\PowerSEO\models;
 
 use Model;
 
-class Settings extends Model{
+class Settings extends Model
+{
 
     public $implement = ['System.Behaviors.SettingsModel'];
 

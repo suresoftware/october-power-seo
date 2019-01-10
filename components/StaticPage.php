@@ -30,7 +30,7 @@ class StaticPage extends ComponentBase
     public function componentDetails()
     {
         return [
-            'name'        => 'suresoftware.powerseo::lang.component.static.name',
+            'name' => 'suresoftware.powerseo::lang.component.static.name',
             'description' => 'suresoftware.powerseo::lang.component.static.description'
         ];
     }
@@ -45,11 +45,13 @@ class StaticPage extends ComponentBase
         $url = Request::path();
 
         // Remove language prefix in case it exists (e.g. from "/en/my-page" to "/my-page")
-        if (class_exists('RainLab\Translate\Behaviors\TranslatableModel'))
+        if (class_exists('RainLab\Translate\Behaviors\TranslatableModel')) {
             $url = substr($url, 3);
+        }
 
-        if (!strlen($url))
+        if (!strlen($url)) {
             $url = '/';
+        }
 
         $router = new Router(Theme::getActiveTheme());
         $this->page = $this->page['page'] = $router->findByUrl($url);
@@ -66,11 +68,10 @@ class StaticPage extends ComponentBase
 
             $settings = Settings::instance();
 
-            if($settings->enable_og_tags)
-            {
+            if ($settings->enable_og_tags) {
                 $this->ogTitle = empty($this->page->meta_title) ? $this->page->title : $this->page->meta_title;
                 $this->ogDescription = $this->page->meta_description;
-                $this->ogUrl = empty($this->page->canonical_url) ? Request::url() : $this->page->canonical_url ;
+                $this->ogUrl = empty($this->page->canonical_url) ? Request::url() : $this->page->canonical_url;
                 $this->ogSiteName = $settings->og_sitename;
                 $this->ogFbAppId = $settings->og_fb_appid;
             }
