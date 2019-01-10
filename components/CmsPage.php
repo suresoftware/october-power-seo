@@ -43,11 +43,9 @@ class CmsPage extends ComponentBase
 
     public function onRun()
     {
-        $theme = Theme::getActiveTheme();
-        $page = Page::load($theme,$this->page->baseFileName);
         $this->page["hasBlog"] = false;
 
-        if(!$page->hasComponent("blogPost"))
+        if(!$this->page->page->hasComponent("blogPost"))
         {
             $this->seo_title = $this->page["seo_title"] = empty($this->page->meta_title) ? $this->page->title : $this->page->meta_title;
             $this->seo_description = $this->page["seo_description"] = $this->page->meta_description;
