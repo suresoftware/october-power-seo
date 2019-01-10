@@ -14,7 +14,7 @@ As all the syntax for the components are same for the `AnandPatel.SeoExtension`,
 `AnandPatel.SeoExtension` plugin and add `SureSoftware.PowerSEO`. All settings and component parameters should be 
 migrated across.
 
-###Inject SEO fields to CMS Pages, Static Pages and Blog.
+### Inject SEO fields to CMS Pages, Static Pages and Blog.
 
 This plugin add SEO fields to CMS Pages, Static Pages and Blog, and for using it you simply need to drop component on layout/page.
 
@@ -28,19 +28,19 @@ Current fields:
 
 __*for more fields, please open an issue and request this on the git repository__
 
-####Features
+### Features
 * Open Graph(og) Tags added for better social sharing
 * Settings added in backend to configure meta and Open Graph tags
 
-####Future Development
+### Future Development
 * Integration of SEO optimizer to optimize pages
 
-####Like this plugin?
+### Like this plugin?
 If you like this plugin, plese give it a star on GitHub
 
-#Documentation
+# Documentation
 
-##Installation
+## Installation
 To install this plugin you have to click on __add to project__ or need to type __SureSoftware.SeoExtension__ in Backend *System > updates > intall plugin*
 
 The plugin currently includes three components:
@@ -48,7 +48,7 @@ The plugin currently includes three components:
 * SEO Blog Post
 * SEO Static Page
 
-####**SEO CMS Page**
+### **SEO CMS Page**
 Put the component in the CMS Layout
 
 ``````````````````
@@ -63,7 +63,7 @@ Put the component in the CMS Layout
 ``````````````````
 
 
-####**SEO Blog Post**
+### **SEO Blog Post**
 Put the component in the page with the blogPost component and pass the post as a parameter
 
 ``````````````````
@@ -73,7 +73,7 @@ Put the component in the page with the blogPost component and pass the post as a
 
 > You must place also SeoCMSPage component on layout
 
-#####**SEO Static Page**
+#### **SEO Static Page**
 Put the component in the head of the Static Pages Layout
 
 ``````````````````
@@ -89,5 +89,5 @@ Put the component in the head of the Static Pages Layout
     </html>
 ``````````````````
 
-####Configuration
+### Configuration
 To configure this Plugin goto Backend *System* then find *My Settings* in left side bar, then click on *SEO Extension*
