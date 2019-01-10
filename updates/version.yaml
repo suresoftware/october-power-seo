@@ -13,3 +13,4 @@
       - Fix issue of SEO Settings Errors
 2.0.0:
       - Changed plugin to PowerSEO, fixed server errors and included latest changes
+      - migrate_settings.php
