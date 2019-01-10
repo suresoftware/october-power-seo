@@ -23,7 +23,7 @@ class Plugin extends PluginBase
         return [
             'name'        => 'suresoftware.powerseo::lang.plugin.name',
             'description' => 'suresoftware.powerseo::lang.plugin.description',
-            'author'      => 'AnandPatel',
+            'author'      => 'Sure Software',
             'icon'        => 'icon-search'
         ];
     }

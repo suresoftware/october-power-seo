@@ -8,6 +8,9 @@ class CreateBlogPostsTable extends Migration
 
     public function up()
     {
+        //TODO check if the other plugin is installed, and migrate the table data across
+
+        //TODO also migrate the settings from the old plugin
         if(PluginManager::instance()->hasPlugin('RainLab.Blog'))
         {
             Schema::table('rainlab_blog_posts', function($table)

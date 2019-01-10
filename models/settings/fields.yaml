@@ -34,7 +34,7 @@ tabs:
 
     content:
       type: hint
-      path: $/anandpatel/seoextension/models/settings/_other_tags_hint.htm
+      path: $/suresoftware/powerseo/models/settings/_other_tags_hint.htm
       tab: suresoftware.powerseo::lang.settings.tab_settings.label
 
     other_tags:
@@ -46,7 +46,7 @@ tabs:
 
     og_tags_description:
       type: hint
-      path: $/anandpatel/seoextension/models/settings/_og_tags_description.htm
+      path: $/suresoftware/powerseo/models/settings/_og_tags_description.htm
       tab: suresoftware.powerseo::lang.settings.tab_og.label
 
     enable_og_tags:
