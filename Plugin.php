@@ -163,37 +163,37 @@ class Plugin extends PluginBase
 
             if (PluginManager::instance()->hasPlugin('RainLab.Blog') && $widget->model instanceof \RainLab\Blog\Models\Post) {
                 $widget->addFields([
-                    'seo_title' => [
+                    'powerseo_title' => [
                         'label' => 'suresoftware.powerseo::lang.editor.meta_title',
                         'type' => 'text',
                         'tab' => 'SEO'
                     ],
-                    'seo_description' => [
+                    'powerseo_description' => [
                         'label' => 'suresoftware.powerseo::lang.editor.meta_description',
                         'type' => 'textarea',
                         'size' => 'tiny',
                         'tab' => 'SEO'
                     ],
-                    'seo_keywords' => [
+                    'powerseo_keywords' => [
                         'label' => 'suresoftware.powerseo::lang.editor.meta_keywords',
                         'type' => 'textarea',
                         'size' => 'tiny',
                         'tab' => 'SEO'
                     ],
-                    'canonical_url' => [
+                    'powerseo_canonical_url' => [
                         'label' => 'suresoftware.powerseo::lang.editor.canonical_url',
                         'type' => 'text',
                         'tab' => 'SEO',
                         'span' => 'left'
                     ],
-                    'redirect_url' => [
+                    'powerseo_redirect_url' => [
                         'label' => 'suresoftware.powerseo::lang.editor.redirect_url',
                         'type' => 'text',
                         'tab' => 'SEO',
                         'span' => 'right'
 
                     ],
-                    'robot_index' => [
+                    'powerseo_robot_index' => [
                         'label' => 'suresoftware.powerseo::lang.editor.robot_index',
                         'type' => 'dropdown',
                         'tab' => 'SEO',
@@ -201,7 +201,7 @@ class Plugin extends PluginBase
                         'default' => 'index',
                         'span' => 'left'
                     ],
-                    'robot_follow' => [
+                    'powerseo_robot_follow' => [
                         'label' => 'suresoftware.powerseo::lang.editor.robot_follow',
                         'type' => 'dropdown',
                         'tab' => 'SEO',

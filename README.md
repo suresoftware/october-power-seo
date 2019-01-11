@@ -6,9 +6,10 @@ issues with the plugin, I have taken over the plugin development and maintain it
 version fixes the server errors in the old plugin._
 
 ## Migration from AnandPatel.SeoExtension
-
-1. Install `SureSoftware.PowerSEO`
-2. Remove `AnandPatel.SeoExtension`
+1. Backup Blog Posts - The fields added by `AnandPatel.SeoExtension` are renamed and prefixed with `powerseo_` in the 
+migrations, which might fail on some servers if the right extensions aren't installed. 
+3. Install `SureSoftware.PowerSEO`
+4. Remove `AnandPatel.SeoExtension`
 
 As all the syntax for the components are same for the `AnandPatel.SeoExtension`, to upgrade you only need to remove the 
 `AnandPatel.SeoExtension` plugin and add `SureSoftware.PowerSEO`. All settings and component parameters should be 
@@ -41,7 +42,7 @@ If you like this plugin, plese give it a star on GitHub
 # Documentation
 
 ## Installation
-To install this plugin you have to click on __add to project__ or need to type __SureSoftware.SeoExtension__ in Backend *System > updates > intall plugin*
+To install this plugin you have to click on __add to project__ or need to type __SureSoftware.PowerSEO__ in Backend *System > updates > intall plugin*
 
 The plugin currently includes three components:
 * SEO CMS Page
