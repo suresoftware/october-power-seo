@@ -11,25 +11,25 @@ class CreateBlogPostsTable extends Migration
     {
         if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
             Schema::table('rainlab_blog_posts', function ($table) {
-                if (!Schema::hasColumn('rainlab_blog_posts', 'seo_title')) {
+                if (!Schema::hasColumn('rainlab_blog_posts', 'powerseo_title')) {
                     $table->string('powerseo_title')->nullable();
                 }
-                if (!Schema::hasColumn('rainlab_blog_posts', 'seo_description')) {
+                if (!Schema::hasColumn('rainlab_blog_posts', 'powerseo_description')) {
                     $table->string('powerseo_description')->nullable();
                 }
-                if (!Schema::hasColumn('rainlab_blog_posts', 'seo_keywords')) {
+                if (!Schema::hasColumn('rainlab_blog_posts', 'powerseo_keywords')) {
                     $table->string('powerseo_keywords')->nullable();
                 }
-                if (!Schema::hasColumn('rainlab_blog_posts', 'canonical_url')) {
+                if (!Schema::hasColumn('rainlab_blog_posts', 'powerseo_canonical_url')) {
                     $table->string('powerseo_canonical_url')->nullable();
                 }
-                if (!Schema::hasColumn('rainlab_blog_posts', 'redirect_url')) {
+                if (!Schema::hasColumn('rainlab_blog_posts', 'powerseo_redirect_url')) {
                     $table->string('powerseo_redirect_url')->nullable();
                 }
-                if (!Schema::hasColumn('rainlab_blog_posts', 'robot_index')) {
+                if (!Schema::hasColumn('rainlab_blog_posts', 'powerseo_robot_index')) {
                     $table->string('powerseo_robot_index')->nullable();
                 }
-                if (!Schema::hasColumn('rainlab_blog_posts', 'robot_follow')) {
+                if (!Schema::hasColumn('rainlab_blog_posts', 'powerseo_robot_follow')) {
                     $table->string('powerseo_robot_follow')->nullable();
                 }
             });
