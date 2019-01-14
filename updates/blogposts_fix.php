@@ -4,7 +4,7 @@ use Schema;
 use October\Rain\Database\Updates\Migration;
 use System\Classes\PluginManager;
 
-class CreateBlogPostsTable extends Migration
+class BlogpostsFix extends Migration
 {
 
     public function up()
