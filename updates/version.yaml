@@ -17,3 +17,6 @@
 2.0.1:
       - Prefixed SEO column names to ensure uniqueness and prevent plugin conflicts
       - migrate_blogpost_seo.php
+2.0.2:
+      - Fixed issue with fresh install on non-migrated sites
+      - blogposts_fix.php
