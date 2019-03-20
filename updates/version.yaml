@@ -20,3 +20,5 @@
 2.0.2:
       - Fixed issue with fresh install on non-migrated sites
       - blogposts_fix.php
+2.0.3:
+      - Fixed bug in blogPost robots not populating

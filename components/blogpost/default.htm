@@ -1,30 +1,30 @@
 {% put meta %}
-{% default %}
-    {% if post.redirect_url %}
-        <meta http-equiv="refresh" content="0; url={{post.redirect_url}}" />
+    {% default %}
+    {% if post.powerseo_redirect_url %}
+        <meta http-equiv="refresh" content="0; url={{post.powerseo_redirect_url}}" />
     {% endif %}
 
-    {% if post.seo_title %}
-        <title>{{ post.seo_title | generateTitle}}</title>
+    {% if post.powerseo_title %}
+        <title>{{ post.powerseo_title | generateTitle}}</title>
     {% else %}
         <title>{{ post.title | generateTitle }}</title>
     {% endif %}
 
-    {% if post.seo_description %}
-        <meta name="description" content="{{post.seo_description}}">
+    {% if post.powerseo_description %}
+        <meta name="description" content="{{post.powerseo_description}}">
     {% endif %}
 
-    {% if post.seo_keywords %}
-        <meta name="keywords" content="{{post.seo_keywords}}">
+    {% if post.powerseo_keywords %}
+        <meta name="keywords" content="{{post.powerseo_keywords}}">
     {% endif %}
 
-    {% if post.canonical_url %}
-        <link rel="canonical" href="{{post.canonical_url}}" />
+    {% if post.powerseo_canonical_url %}
+        <link rel="canonical" href="{{post.powerseo_canonical_url}}" />
     {% else %}
         {{ '' | generateCanonicalUrl}}
     {% endif %}
 
-        <meta name="robots" content="{{post.robot_index}},{{post.robot_follow}}">
+    <meta name="robots" content="{{post.powerseo_robot_index}},{{post.powerseo_robot_follow}}">
 
     {{ ''|otherMetaTags|raw }}
 
