@@ -221,6 +221,10 @@ class Plugin extends PluginBase
                 throw new ApplicationException(Lang::get('cms::lang.theme.edit.not_found'));
             }
 
+            if ($widget->isNested) {
+                return;
+            }
+
             $widget->addFields(
                 [
                     'settings[seo_keywords]' => [
