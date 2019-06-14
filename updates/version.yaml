@@ -22,3 +22,5 @@
       - blogposts_fix.php
 2.0.3:
       - Fixed bug in blogPost robots not populating
+2.0.4:
+      - Fixed bug with fields showing up in the static pages repeater
