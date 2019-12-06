@@ -46,7 +46,9 @@ class StaticPage extends ComponentBase
 
         // Remove language prefix in case it exists (e.g. from "/en/my-page" to "/my-page")
         if (class_exists('RainLab\Translate\Behaviors\TranslatableModel')) {
-            $url = substr($url, 3);
+            if (strpos(substr($url, 1), '/')) { // check if url has language prefix
+                $url = substr($url, 3);
+            }
         }
 
         if (!strlen($url)) {
