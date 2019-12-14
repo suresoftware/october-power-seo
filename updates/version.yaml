@@ -24,3 +24,5 @@
       - Fixed bug in blogPost robots not populating
 2.0.4:
       - Fixed bug with fields showing up in the static pages repeater
+2.0.5:
+      - Fixed bug the TranslatableModel check not working for default locale URLs
