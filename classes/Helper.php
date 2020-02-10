@@ -83,6 +83,12 @@ class Helper
                 $ogUrl = $this->page->powerseo_canonical_url;
             }
 
+            //Add featured images to the social tags
+            if($post->featured_images){
+                foreach($post->featured_images as $image){
+                    $ogTags .= '<meta property="og:image" content="' . $image->path . '" />' . "\n";
+                }
+            }
             $ogTags .= '<meta property="og:title" content="' . $ogTitle . '" />' . "\n";
 
             $ogTags .= '<meta property="og:url" content="' . $ogUrl . '" />';
