@@ -65,7 +65,7 @@ Put the component in the CMS Layout
 
 
 ### **SEO Blog Post**
-Put the component in the page with the blogPost component and pass the post as a parameter
+Put the component in the page with the SeoBlogPost component and pass the post as a parameter
 
 ``````````````````
     {% component 'blogPost' %}

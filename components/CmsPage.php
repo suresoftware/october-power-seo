@@ -45,7 +45,7 @@ class CmsPage extends ComponentBase
     {
         $this->page["hasBlog"] = false;
 
-        if (!$this->page->page->hasComponent("blogPost")) {
+        if (!$this->page->page->hasComponent("SeoBlogPost")) {
             $this->seo_title = $this->page["seo_title"] = empty($this->page->meta_title) ? $this->page->title : $this->page->meta_title;
             $this->seo_description = $this->page["seo_description"] = $this->page->meta_description;
             $this->seo_keywords = $this->page["seo_keywords"] = $this->page->seo_keywords;
