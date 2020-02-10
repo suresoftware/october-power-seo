@@ -89,8 +89,8 @@ class Helper
                     $ogTags .= '<meta property="og:image" content="' . $image->path . '" />' . "\n";
                 }
             }
-            $ogTags .= '<meta property="og:title" content="' . $ogTitle . '" />' . "\n";
 
+            $ogTags .= '<meta property="og:title" content="' . $ogTitle . '" />' . "\n";
             $ogTags .= '<meta property="og:url" content="' . $ogUrl . '" />';
 
             return $ogTags;

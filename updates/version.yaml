@@ -21,8 +21,11 @@
       - Fixed issue with fresh install on non-migrated sites
       - blogposts_fix.php
 2.0.3:
-      - Fixed bug in blogPost robots not populating
+      - Fixed bug in SeoBlogPost robots not populating
 2.0.4:
       - Fixed bug with fields showing up in the static pages repeater
 2.0.5:
       - Fixed bug the TranslatableModel check not working for default locale URLs
+2.1.1:
+      - Added feature to show the blog "Featured Image" on social media (using og tags)
+      - Fixed bug with blog post meta titles not being set correctly
