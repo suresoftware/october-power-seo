@@ -29,3 +29,5 @@
 2.1.1:
       - Added feature to show the blog "Featured Image" on social media (using og tags)
       - Fixed bug with blog post meta titles not being set correctly
+2.1.2: 
+      - Fixes bug with fields repeating in Rainlab.Pages repeatable sections
