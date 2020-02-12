@@ -110,6 +110,9 @@ class Plugin extends PluginBase
     {
         \Event::listen('backend.form.extendFields', function ($widget) {
             if (PluginManager::instance()->hasPlugin('RainLab.Pages') && $widget->model instanceof \RainLab\Pages\Classes\Page) {
+                if ($widget->isNested) {
+                    return;
+                }                
                 $widget->addFields([
                     'viewBag[seo_title]' => [
                         'label' => 'suresoftware.powerseo::lang.editor.meta_title',
@@ -162,6 +165,9 @@ class Plugin extends PluginBase
             }
 
             if (PluginManager::instance()->hasPlugin('RainLab.Blog') && $widget->model instanceof \RainLab\Blog\Models\Post) {
+                if ($widget->isNested) {
+                    return;
+                }                
                 $widget->addFields([
                     'powerseo_title' => [
                         'label' => 'suresoftware.powerseo::lang.editor.meta_title',
