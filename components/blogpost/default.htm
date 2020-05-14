@@ -12,6 +12,8 @@
 
     {% if post.powerseo_description %}
         <meta name="description" content="{{post.powerseo_description}}">
+    {% elseif post.excerpt %}
+        <meta name="description" content="{{post.excerpt}}">
     {% endif %}
 
     {% if post.powerseo_keywords %}
@@ -24,7 +26,15 @@
         {{ '' | generateCanonicalUrl}}
     {% endif %}
 
-    <meta name="robots" content="{{post.powerseo_robot_index}},{{post.powerseo_robot_follow}}">
+    {% if post.powerseo_robot_index and post.powerseo_robot_follow %}
+        <meta name="robots" content="{{post.powerseo_robot_index}},{{post.powerseo_robot_follow}}">
+    {% elseif post.powerseo_robot_index %}
+        <meta name="robots" content="{{post.powerseo_robot_index}},follow">
+    {% elseif post.powerseo_robot_follow %}
+        <meta name="robots" content="index,{{post.powerseo_robot_follow}}">
+    {% else %}
+        <meta name="robots" content="index,follow">
+    {% endif %}
 
     {{ ''|otherMetaTags|raw }}
 
