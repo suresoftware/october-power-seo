@@ -22,7 +22,15 @@
     {{ '' | generateCanonicalUrl}}
 {% endif %}
 
+{% if __SELF__.robot_index and __SELF__.robot_follow %}
     <meta name="robots" content="{{__SELF__.robot_index}},{{__SELF__.robot_follow}}">
+{% elseif __SELF__.robot_index %}
+    <meta name="robots" content="{{__SELF__.robot_index}},follow">
+{% elseif __SELF__.robot_follow %}
+    <meta name="robots" content="index,{{__SELF__.robot_follow}}">
+{% else %}
+    <meta name="robots" content="index,follow">
+{% endif %}
 
 {{ ''|otherMetaTags|raw }}
 
