@@ -1,5 +1,8 @@
 <?php namespace SureSoftware\PowerSEO;
 
+use Backend\Classes\FormTabs;
+use Backend\Widgets\Form;
+use RainLab\Blog\Models\Post;
 use SureSoftware\PowerSEO\classes\Helper;
 use Cms\Classes\Page;
 use Cms\Classes\Theme;
@@ -108,12 +111,12 @@ class Plugin extends PluginBase
 
     public function register()
     {
-        \Event::listen('backend.form.extendFields', function ($widget) {
+        \Event::listen('backend.form.extendFieldsBefore', function (Form $widget) {
             if (PluginManager::instance()->hasPlugin('RainLab.Pages') && $widget->model instanceof \RainLab\Pages\Classes\Page) {
                 if ($widget->isNested) {
                     return;
-                }                
-                $widget->addFields([
+                }
+                $extraStaticPageFields = [
                     'viewBag[seo_title]' => [
                         'label' => 'suresoftware.powerseo::lang.editor.meta_title',
                         'type' => 'text',
@@ -160,15 +163,16 @@ class Plugin extends PluginBase
                         'default' => 'follow',
                         'span' => 'right'
                     ],
-                ],
-                    'primary');
+                ];
+
+              $widget->tabs['fields'] = array_merge($widget->tabs['fields'], $extraStaticPageFields);
             }
 
-            if (PluginManager::instance()->hasPlugin('RainLab.Blog') && $widget->model instanceof \RainLab\Blog\Models\Post) {
+            if (PluginManager::instance()->hasPlugin('RainLab.Blog') && $widget->model instanceof Post) {
                 if ($widget->isNested) {
                     return;
-                }                
-                $widget->addFields([
+                }
+                $extraPostFields = [
                     'powerseo_title' => [
                         'label' => 'suresoftware.powerseo::lang.editor.meta_title',
                         'type' => 'text',
@@ -213,10 +217,11 @@ class Plugin extends PluginBase
                         'tab' => 'SEO',
                         'options' => $this->getFollowOptions(),
                         'default' => 'follow',
-                        'span' => 'right'
+                        'span' => 'right',
                     ],
-                ],
-                    'secondary');
+                ];
+
+              $widget->secondaryTabs['fields'] = array_merge($widget->secondaryTabs['fields'], $extraPostFields);
             }
 
             if (!$widget->model instanceof \Cms\Classes\Page) {
@@ -231,8 +236,7 @@ class Plugin extends PluginBase
                 return;
             }
 
-            $widget->addFields(
-                [
+          $extraPageFields = [
                     'settings[seo_keywords]' => [
                         'label' => 'suresoftware.powerseo::lang.editor.meta_keywords',
                         'type' => 'textarea',
@@ -269,14 +273,57 @@ class Plugin extends PluginBase
                         'default' => 'follow',
                         'span' => 'right'
                     ],
-                ],
-                'primary'
-            );
+                ];
+
+          $widget->tabs['fields'] = array_merge($widget->tabs['fields'], $extraPageFields);
+        });
+
+      if (PluginManager::instance()->hasPlugin('RainLab.Pages')) {
+        \RainLab\Pages\Classes\Page::extend(function($model) {
+          $model->translatable = array_merge(
+              $model->translatable,
+              [
+                  'viewBag[seo_title]',
+                  'viewBag[seo_description]',
+                  'viewBag[seo_keywords]',
+                  'viewBag[canonical_url]',
+                  'viewBag[redirect_url]',
+              ]
+          );
+        });
+      }
+
+      if (PluginManager::instance()->hasPlugin('RainLab.Blog')) {
+
+        Post::extend(function($model) {
+          $model->translatable = array_merge(
+              $model->translatable,
+              [
+                  'powerseo_title',
+                  'powerseo_description',
+                  'powerseo_keywords',
+                  'powerseo_canonical_url',
+                  'powerseo_redirect_url',
+              ]
+          );
+        });
+      }
+
+      \Cms\Classes\Page::extend(function($model) {
+          $model->translatable = array_merge(
+              $model->translatable,
+              [
+                  'seo_keywords',
+                  'canonical_url',
+                  'redirect_url',
+              ]
+          );
         });
     }
 
 
-    private function getIndexOptions()
+
+  private function getIndexOptions()
     {
         return ["index" => "index", "noindex" => "noindex"];
     }
