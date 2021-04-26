@@ -25,6 +25,10 @@ return [
             'other_tags' => 'Diğer meta taglar',
             'other_tags_comment_above' => 'Tüm sayfalarda görünmesini istediğiniz etiketleri ekleyin',
             'other_tags_comment' => 'Meta author, meta viewport gibi diğer meta etiketleri ekleyin',
+            'other_tags_position' => 'Position other meta tags',
+			'other_tags_position_top' => 'At top of HEAD element',
+			'other_tags_position_bottom' => 'At bottom of HEAD element (before any OG tags)',
+            'other_tags_position_comment' => 'The position of other meta tags in HEAD element',
         ],
         'tab_og' => [
             'label' => 'Open Graph',

@@ -1,32 +1,36 @@
 {% put meta %}
     {% default %}
-    {% if post.powerseo_redirect_url %}
+    {%- if post.powerseo_redirect_url %}
         <meta http-equiv="refresh" content="0; url={{post.powerseo_redirect_url}}" />
-    {% endif %}
+    {% endif -%}
 
-    {% if post.powerseo_title %}
+	{%- if getSettings('other_tags_position') == 'top' %}
+		{{ ''|otherMetaTags|raw }}
+	{% endif -%}
+
+    {%- if post.powerseo_title %}
         <title>{{ post.powerseo_title | generateTitle}}</title>
     {% else %}
         <title>{{ post.title | generateTitle }}</title>
-    {% endif %}
+    {% endif -%}
 
-    {% if post.powerseo_description %}
+    {%- if post.powerseo_description %}
         <meta name="description" content="{{post.powerseo_description}}">
     {% elseif post.excerpt %}
         <meta name="description" content="{{post.excerpt}}">
-    {% endif %}
+    {% endif -%}
 
-    {% if post.powerseo_keywords %}
+    {%- if post.powerseo_keywords %}
         <meta name="keywords" content="{{post.powerseo_keywords}}">
-    {% endif %}
+    {% endif -%}
 
-    {% if post.powerseo_canonical_url %}
+    {%- if post.powerseo_canonical_url %}
         <link rel="canonical" href="{{post.powerseo_canonical_url}}" />
     {% else %}
         {{ '' | generateCanonicalUrl}}
-    {% endif %}
+    {% endif -%}
 
-    {% if post.powerseo_robot_index and post.powerseo_robot_follow %}
+    {%- if post.powerseo_robot_index and post.powerseo_robot_follow %}
         <meta name="robots" content="{{post.powerseo_robot_index}},{{post.powerseo_robot_follow}}">
     {% elseif post.powerseo_robot_index %}
         <meta name="robots" content="{{post.powerseo_robot_index}},follow">
@@ -34,9 +38,11 @@
         <meta name="robots" content="index,{{post.powerseo_robot_follow}}">
     {% else %}
         <meta name="robots" content="index,follow">
-    {% endif %}
+    {% endif -%}
 
-    {{ ''|otherMetaTags|raw }}
+    {% if getSettings('other_tags_position') != 'top' %}
+        {{ ''|otherMetaTags|raw }}
+    {% endif %}
 
     {{ post|generateOgTags }}
 {% endput %}

@@ -32,6 +32,10 @@
             'other_tags' => 'Övriga metataggar',
             'other_tags_comment_above' => 'Lägg in taggar du vill antända på alla sidor',
             'other_tags_comment' => 'Lägg in övriga metataggar såsom author, meta viewport etc',
+            'other_tags_position' => 'Position other meta tags',
+			'other_tags_position_top' => 'At top of HEAD element',
+			'other_tags_position_bottom' => 'At bottom of HEAD element (before any OG tags)',
+            'other_tags_position_comment' => 'The position of other meta tags in HEAD element',
         ],
         'tab_og' => [
             'label' => 'Open Graph',
