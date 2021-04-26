@@ -35,6 +35,10 @@
             'other_tags' => 'Other meta tags',
             'other_tags_comment_above' => 'Insert tags that you want to insert in all pages',
             'other_tags_comment' => 'Insert other meta tags like meta author, meta viewport etc',
+            'other_tags_position' => 'Position other meta tags',
+			'other_tags_position_top' => 'At top of HEAD element',
+			'other_tags_position_bottom' => 'At bottom of HEAD element (before any OG tags)',
+            'other_tags_position_comment' => 'The position of other meta tags in HEAD element',
         ],
         'tab_og' => [
             'label' => 'Open Graph',

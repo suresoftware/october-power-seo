@@ -4,6 +4,7 @@ use Backend\Classes\FormTabs;
 use Backend\Widgets\Form;
 use RainLab\Blog\Models\Post;
 use SureSoftware\PowerSEO\classes\Helper;
+use SureSoftware\PowerSEO\Models\Settings;
 use Cms\Classes\Page;
 use Cms\Classes\Theme;
 use System\Classes\PluginBase;
@@ -62,9 +63,15 @@ class Plugin extends PluginBase
             'filters' => [
                 'generateTitle' => [$this, 'generateTitle'],
                 'generateCanonicalUrl' => [$this, 'generateCanonicalUrl'],
-                'otherMetaTags' => [$this, 'otherMetaTags'],
+                'otherMetaTags' => [$this, 'otherMetaTags'],              
                 'generateOgTags' => [$this, 'generateOgTags']
-            ]
+            ],
+            'functions' => [
+                'getSettings' => function($setting)
+				{
+					return Settings::get($setting);
+				},
+            ],
         ];
     }
 

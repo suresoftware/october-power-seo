@@ -25,6 +25,10 @@ return [
             'other_tags' => 'Ostatní meta tagy',
             'other_tags_comment_above' => 'Zadejte tagy které chcete přidat na všech stránkách',
             'other_tags_comment' => 'Zadejte meta tagy jako například meta author, meta viewport a další',
+            'other_tags_position' => 'Position other meta tags',
+			'other_tags_position_top' => 'At top of HEAD element',
+			'other_tags_position_bottom' => 'At bottom of HEAD element (before any OG tags)',
+            'other_tags_position_comment' => 'The position of other meta tags in HEAD element',
         ],
         'tab_og' => [
             'label' => 'Open Graph',

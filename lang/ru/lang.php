@@ -25,6 +25,10 @@ return [
             'other_tags' => 'Другие Мета-теги',
             'other_tags_comment_above' => 'Введите теги, которые вы хотите вставить на все страницы',
             'other_tags_comment' => 'Например,такие теги как author, viewport и т.д.',
+            'other_tags_position' => 'Position other meta tags',
+			'other_tags_position_top' => 'At top of HEAD element',
+			'other_tags_position_bottom' => 'At bottom of HEAD element (before any OG tags)',
+            'other_tags_position_comment' => 'The position of other meta tags in HEAD element',
         ],
         'tab_og' => [
             'label' => 'Open Graph',

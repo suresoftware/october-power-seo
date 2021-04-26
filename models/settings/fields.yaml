@@ -44,6 +44,15 @@ tabs:
       commentAbove: suresoftware.powerseo::lang.settings.tab_settings.other_tags_comment_above
       comment: suresoftware.powerseo::lang.settings.tab_settings.other_tags_comment
 
+    other_tags_position:
+      label: suresoftware.powerseo::lang.settings.tab_settings.other_tags_position
+      type: radio
+      tab: suresoftware.powerseo::lang.settings.tab_settings.label      
+      comment: suresoftware.powerseo::lang.settings.tab_settings.other_tags_position_comment
+      options:
+        top: suresoftware.powerseo::lang.settings.tab_settings.other_tags_position_top
+        bottom: suresoftware.powerseo::lang.settings.tab_settings.other_tags_position_bottom
+
     og_tags_description:
       type: hint
       path: $/suresoftware/powerseo/models/settings/_og_tags_description.htm
@@ -67,10 +76,3 @@ tabs:
       type: text
       span: left
       tab: suresoftware.powerseo::lang.settings.tab_og.label
-
-
-
-
-
-
-
