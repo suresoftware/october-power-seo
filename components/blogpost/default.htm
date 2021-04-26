@@ -4,6 +4,10 @@
         <meta http-equiv="refresh" content="0; url={{post.powerseo_redirect_url}}" />
     {% endif -%}
 
+	{%- if getSettings('other_tags_position') == 'top' %}
+		{{ ''|otherMetaTags|raw }}
+	{% endif -%}
+
     {%- if post.powerseo_title %}
         <title>{{ post.powerseo_title | generateTitle}}</title>
     {% else %}
@@ -36,7 +40,9 @@
         <meta name="robots" content="index,follow">
     {% endif -%}
 
-    {{ ''|otherMetaTags|raw }}
+    {% if getSettings('other_tags_position') != 'top' %}
+        {{ ''|otherMetaTags|raw }}
+    {% endif %}
 
     {{ post|generateOgTags }}
 {% endput %}

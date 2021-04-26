@@ -2,6 +2,10 @@
     <meta http-equiv="refresh" content="0; url={{__SELF__.redirect_url}}" />
 {% endif -%}
 
+{%- if getSettings('other_tags_position') == 'top' %}
+{{ ''|otherMetaTags|raw }}
+{% endif -%}
+
 {%- if __SELF__.seo_title %}
     <title>{{__SELF__.seo_title | generateTitle }}</title>
 {% else %}
@@ -32,7 +36,9 @@
     <meta name="robots" content="index,follow">
 {% endif -%}
 
+{% if getSettings('other_tags_position') != 'top' %}
 {{ ''|otherMetaTags|raw }}
+{% endif %}
 
 {%- if __SELF__.ogTitle %}
 <meta property="og:title" content="{{ __SELF__.ogTitle }}" />
