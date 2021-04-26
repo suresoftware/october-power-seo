@@ -5,29 +5,29 @@
 
 {% else %}
 
-    {% if __SELF__.redirect_url %}
+    {%- if __SELF__.redirect_url %}
         <meta http-equiv="refresh" content="0; url={{__SELF__.redirect_url}}" />
-    {% endif %}
+    {% endif -%}
 
-    {% if __SELF__.seo_title %}
+    {%- if __SELF__.seo_title %}
         <title>{{__SELF__.seo_title | generateTitle}}</title>
-    {% endif %}
+    {% endif -%}
 
-    {% if __SELF__.seo_description %}
+    {%- if __SELF__.seo_description %}
         <meta name="description" content="{{__SELF__.seo_description}}">
-    {% endif %}
+    {% endif -%}
 
-    {% if __SELF__.seo_keywords %}
+    {%- if __SELF__.seo_keywords %}
         <meta name="keywords" content="{{__SELF__.seo_keywords}}">
-    {% endif %}
+    {% endif -%}
 
-    {% if __SELF__.canonical_url %}
+    {%- if __SELF__.canonical_url %}
         <link rel="canonical" href="{{__SELF__.canonical_url}}" />
     {% else %}
         {{ '' | generateCanonicalUrl}}
-    {% endif %}
+    {% endif -%}
 
-    {% if __SELF__.robot_index and __SELF__.robot_follow %}
+    {%- if __SELF__.robot_index and __SELF__.robot_follow %}
         <meta name="robots" content="{{__SELF__.robot_index}},{{__SELF__.robot_follow}}">
     {% elseif __SELF__.robot_index %}
         <meta name="robots" content="{{__SELF__.robot_index}},follow">
@@ -35,28 +35,28 @@
         <meta name="robots" content="index,{{__SELF__.robot_follow}}">
     {% else %}
         <meta name="robots" content="index,follow">
-    {% endif %}
+    {% endif -%}
 
     {{ ''|otherMetaTags|raw }}
 
-    {% if __SELF__.ogTitle %}
+    {%- if __SELF__.ogTitle %}
         <meta property="og:title" content="{{ __SELF__.ogTitle }}" />
-    {% endif %}
+    {% endif -%}
 
-    {% if __SELF__.ogUrl %}
+    {%- if __SELF__.ogUrl %}
         <meta property="og:url" content="{{ __SELF__.ogUrl }}" />
-    {% endif %}
+    {% endif -%}
 
-    {% if __SELF__.ogSiteName %}
+    {%- if __SELF__.ogSiteName %}
         <meta property="og:site_name" content="{{ __SELF__.ogSiteName }}" />
-    {% endif %}
+    {% endif -%}
 
-    {% if __SELF__.ogDescription %}
+    {% -if __SELF__.ogDescription %}
         <meta property="og:description" content="{{ __SELF__.ogDescription }}" />
-    {% endif %}
+    {% endif -%}
 
-    {% if __SELF__.ogFbAppId %}
+    {%- if __SELF__.ogFbAppId %}
         <meta property="fb:app_id" content="{{ __SELF__.ogFbAppId  }}" />
-    {% endif %}
+    {% endif -%}
 
 {% endif %}
